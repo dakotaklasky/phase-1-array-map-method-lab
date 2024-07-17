@@ -12,5 +12,17 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+
+  function fixSentence(sentence){
+    const sentenceArray = sentence.split(' ')
+    const UpperArray = sentenceArray.map((element) => element[0].toUpperCase()+element.slice(1,element.length))
+    console.log(UpperArray.join(" "))
+    return UpperArray.join(" ")
+  }
+  return tutorials.map((element) => fixSentence(element))
 }
+
+//need to iterate through each element of the tutorials array
+//within each element iterate through all of the words
+
+//capitalize letters of a sentence
